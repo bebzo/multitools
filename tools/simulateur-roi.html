@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur ROI (Retour sur Investissement) - MultiTools</title>
+    <meta name="description"
+        content="Simulez la rentabilité de vos investissements. Calcul simple et rapide du pourcentage de ROI.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <a href="../index.html" class="logo"><span>⚡</span> MultiTools</a>
+            <nav><a href="../index.html" class="btn-primary"
+                    style="background: transparent; color: var(--text-main); border: 1px solid var(--border);">←
+                    Retour</a></nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div
+            style="background: var(--bg-card); height: 90px; margin: 20px 0; border-radius: var(--radius-sm); border: 1px dashed var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-muted);">
+            Espace Publicitaire</div>
+
+        <section class="calculator-layout">
+            <div>
+                <h1>Simulateur ROI</h1>
+                <div class="calc-panel">
+                    <div class="input-group">
+                        <label for="invested">Montant Investi (Coût)</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="invested" placeholder="ex: 1000">
+                            <span class="suffix">€</span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="returned">Montant Récupéré (Gain Final)</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="returned" placeholder="ex: 1500">
+                            <span class="suffix">€</span>
+                        </div>
+                    </div>
+
+                    <div class="result-box">
+                        <div class="result-row">
+                            <span class="result-label">Gain Net</span>
+                            <span class="result-value val-gain">...</span>
+                        </div>
+                        <div class="result-row highlight">
+                            <span class="result-label">ROI (Rentabilité)</span>
+                            <span class="result-value val-roi" style="font-size: 1.5rem;">...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside>
+                <div class="sidebar-ad">Pub Carrée</div>
+            </aside>
+        </section>
+    </main>
+
+    <script>
+        const inputs = [document.getElementById('invested'), document.getElementById('returned')];
+        const valGain = document.querySelector('.val-gain');
+        const valRoi = document.querySelector('.val-roi');
+
+        function calculate() {
+            const invested = parseFloat(inputs[0].value);
+            const returned = parseFloat(inputs[1].value);
+
+            if (!isNaN(invested) && !isNaN(returned) && invested > 0) {
+                const gain = returned - invested;
+                const roi = (gain / invested) * 100;
+
+                valGain.textContent = new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(gain);
+                valRoi.textContent = roi.toFixed(2) + ' %';
+
+                valRoi.style.color = roi >= 0 ? 'var(--secondary)' : 'var(--accent)';
+            }
+        }
+        inputs.forEach(el => el.addEventListener('input', calculate));
+    </script>
+</body>
+
+</html>

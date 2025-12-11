@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul Salaire Brut en Net 2025 - MultiTools</title>
+    <meta name="description"
+        content="Simulateur gratuit de salaire Brut en Net pour cadres et non-cadres. Calcul précis avec charges sociales et impôt à la source.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <a href="../index.html" class="logo">
+                <span>⚡</span> MultiTools
+            </a>
+            <nav>
+                <a href="../index.html" class="btn-primary"
+                    style="background: transparent; color: var(--text-main); border: 1px solid var(--border);">←
+                    Retour</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Ad Placeholder (Top) -->
+        <div
+            style="background: var(--bg-card); height: 90px; margin: 20px 0; border-radius: var(--radius-sm); border: 1px dashed var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-muted);">
+            Espace Publicitaire (AdSense Leaderboard)
+        </div>
+
+        <section class="calculator-layout">
+
+            <!-- Left: Calculator -->
+            <div>
+                <h1>Calculateur Brut / Net</h1>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">Estimation rapide pour 2025 (France).</p>
+
+                <div class="calc-panel">
+                    <div class="input-group">
+                        <label for="amount">Votre Salaire (Brut)</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="amount" value="35000" step="100">
+                            <span class="suffix">€</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div>
+                            <label for="period">Fréquence</label>
+                            <div class="input-wrapper">
+                                <select id="period">
+                                    <option value="year">Annuel</option>
+                                    <option value="month">Mensuel</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="status">Statut</label>
+                            <div class="input-wrapper">
+                                <select id="status">
+                                    <option value="non-cadre">Non Cardre</option>
+                                    <option value="cadre">Cadre</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Results Inline -->
+                    <div class="result-box">
+                        <div class="result-row">
+                            <span class="result-label">Salaire Brut</span>
+                            <span class="result-value val-gross" data-period="month">...</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">Net avant impôt</span>
+                            <span class="result-value val-net" data-period="month" style="font-weight: 600;">...</span>
+                        </div>
+                        <div class="result-row highlight">
+                            <span class="result-label">Net après impôt*</span>
+                            <span class="result-value val-net-tax" data-period="month">...</span>
+                        </div>
+                        <div class="result-row"
+                            style="margin-top: 12px; font-size: 0.85rem; border-top: 1px dashed var(--border); padding-top: 12px;">
+                            <span class="result-label">Coût total employeur</span>
+                            <span class="result-value val-cost" data-period="month">...</span>
+                        </div>
+                        <p style="margin-top: 16px; font-size: 0.75rem; color: var(--text-muted); font-style: italic;">
+                            *Estimation basée sur un taux neutre moyen. Le taux réel dépend de votre situation
+                            familiale.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Content for SEO below tool -->
+                <div style="margin-top: 40px; color: var(--text-muted);">
+                    <h3>Pourquoi calculer son salaire net ?</h3>
+                    <p>En France, la différence entre le salaire brut (annoncé en entretien) et le net (ce qui arrive
+                        sur le compte) est importante. Les charges sociales représentent environ 22% à 25% du brut.</p>
+                </div>
+            </div>
+
+            <!-- Right: Sidebar Ads -->
+            <aside>
+                <div class="sidebar-ad">
+                    Pub Carrée (300x250)
+                </div>
+                <div class="sidebar-ad" style="margin-top: 24px; height: 600px;">
+                    Pub Verticale (Skyscraper)
+                </div>
+            </aside>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MultiTools.</p>
+        </div>
+    </footer>
+
+    <script src="../js/salary-calculator.js"></script>
+</body>
+
+</html>

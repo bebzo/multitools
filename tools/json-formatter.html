@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Formatter & Validator - MultiTools</title>
+    <meta name="description"
+        content="Formateur JSON en ligne gratuit. Validez, minifiez et embellissez votre code JSON instantanément.">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .json-editor {
+            width: 100%;
+            height: 300px;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 16px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            background: var(--bg-body);
+            color: var(--text-main);
+            resize: vertical;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            margin: 16px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav-flex">
+            <a href="../index.html" class="logo"><span>⚡</span> MultiTools</a>
+            <nav><a href="../index.html" class="btn-primary"
+                    style="background: transparent; color: var(--text-main); border: 1px solid var(--border);">←
+                    Retour</a></nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 style="margin-top: 40px;">JSON Formatter</h1>
+
+        <div class="calc-panel" style="margin-top: 20px;">
+            <label for="json-input" style="font-weight: 600; margin-bottom: 8px; display: block;">Votre JSON (Collez
+                ici)</label>
+            <textarea id="json-input" class="json-editor" placeholder='{"example": "Collez votre JSON ici"}'></textarea>
+
+            <div class="actions">
+                <button onclick="formatJson()" class="btn-primary">Beautify (Format)</button>
+                <button onclick="minifyJson()" class="btn-primary"
+                    style="background: var(--bg-body); color: var(--text-main); border: 1px solid var(--border);">Minify</button>
+                <button onclick="copyToClipboard()" class="btn-primary"
+                    style="background: var(--secondary);">Copier</button>
+            </div>
+
+            <div id="status-msg" style="margin-top: 10px; font-weight: 500;"></div>
+        </div>
+
+    </main>
+
+    <script>
+        const input = document.getElementById('json-input');
+        const status = document.getElementById('status-msg');
+
+        function formatJson() {
+            try {
+                const obj = JSON.parse(input.value);
+                input.value = JSON.stringify(obj, null, 4);
+                status.textContent = "✅ JSON Valide et Formaté";
+                status.style.color = "green";
+            } catch (e) {
+                status.textContent = "❌ Erreur de syntaxe JSON";
+                status.style.color = "red";
+            }
+        }
+
+        function minifyJson() {
+            try {
+                const obj = JSON.parse(input.value);
+                input.value = JSON.stringify(obj);
+                status.textContent = "✅ JSON Minifié";
+                status.style.color = "green";
+            } catch (e) {
+                status.textContent = "❌ Erreur de syntaxe JSON";
+                status.style.color = "red";
+            }
+        }
+
+        function copyToClipboard() {
+            input.select();
+            document.execCommand('copy');
+            status.textContent = "📋 Copié dans le presse-papier";
+            status.style.color = "var(--text-main)";
+        }
+    </script>
+</body>
+
+</html>

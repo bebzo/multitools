@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur Lorem Ipsum - MultiTools</title>
+    <meta name="description" content="Générez du faux texte (Lorem Ipsum) pour vos maquettes et designs web.">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container nav-flex">
+            <a href="../index.html" class="logo"><span>⚡</span> MultiTools</a>
+            <nav><a href="../index.html" class="btn-primary"
+                    style="background: transparent; color: var(--text-main); border: 1px solid var(--border);">←
+                    Retour</a></nav>
+        </div>
+    </header>
+    <main class="container">
+        <h1>Générateur Lorem Ipsum</h1>
+        <div class="calc-panel">
+            <div class="input-group">
+                <label>Nombre de paragraphes</label>
+                <input type="number" id="num-paras" value="3" min="1" max="20"
+                    style="padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                <button onclick="generate()" class="btn-primary" style="margin-left: 10px;">Générer</button>
+            </div>
+            <textarea id="output" readonly
+                style="width: 100%; height: 300px; padding: 16px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-body);"></textarea>
+        </div>
+    </main>
+    <script>
+        const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+        function generate() {
+            const count = document.getElementById('num-paras').value;
+            let res = [];
+            for (let i = 0; i < count; i++) res.push(lorem);
+            document.getElementById('output').value = res.join('\n\n');
+        }
+        generate();
+    </script>
+</body>
+
+</html>

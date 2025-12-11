@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compteur de Mots et Caractères - MultiTools</title>
+    <meta name="description"
+        content="Comptez instantanément le nombre de mots, caractères (avec/sans espaces), phrases et paragraphes. Idéal pour SEO et rédaction.">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container nav-flex">
+            <a href="../index.html" class="logo"><span>⚡</span> MultiTools</a>
+            <nav><a href="../index.html" class="btn-primary"
+                    style="background: transparent; color: var(--text-main); border: 1px solid var(--border);">←
+                    Retour</a></nav>
+        </div>
+    </header>
+    <main class="container">
+        <h1>Compteur de Mots</h1>
+        <div class="calc-panel">
+            <textarea id="text-input"
+                style="width: 100%; height: 300px; padding: 16px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-family: inherit; font-size: 1rem;"
+                placeholder="Tapez ou collez votre texte ici..."></textarea>
+            <div class="result-box"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; text-align: center;">
+                <div>
+                    <div class="result-value" id="count-words">0</div>
+                    <div class="result-label">Mots</div>
+                </div>
+                <div>
+                    <div class="result-value" id="count-chars">0</div>
+                    <div class="result-label">Caractères</div>
+                </div>
+                <div>
+                    <div class="result-value" id="count-lines">0</div>
+                    <div class="result-label">Lignes</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const txt = document.getElementById('text-input');
+        const vals = {
+            w: document.getElementById('count-words'),
+            c: document.getElementById('count-chars'),
+            l: document.getElementById('count-lines')
+        };
+        txt.addEventListener('input', () => {
+            const val = txt.value;
+            vals.c.textContent = val.length;
+            vals.w.textContent = val.trim() === '' ? 0 : val.trim().split(/\s+/).length;
+            vals.l.textContent = val.trim() === '' ? 0 : val.split(/\r\n|\r|\n/).length;
+        });
+    </script>
+</body>
+
+</html>

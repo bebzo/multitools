@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur Majuscule / Minuscule - MultiTools</title>
+    <meta name="description"
+        content="Transformez vos textes : MAJUSCULES, minuscules, ou Capitales À Chaque Mot. Gratuit et instantané.">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container nav-flex">
+            <a href="../index.html" class="logo"><span>⚡</span> MultiTools</a>
+            <nav><a href="../index.html" class="btn-primary"
+                    style="background: transparent; color: var(--text-main); border: 1px solid var(--border);">←
+                    Retour</a></nav>
+        </div>
+    </header>
+    <main class="container">
+        <h1>Convertisseur de Casse</h1>
+        <div class="calc-panel">
+            <textarea id="text-input"
+                style="width: 100%; height: 200px; padding: 16px; border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 20px;"
+                placeholder="Texte à convertir..."></textarea>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button onclick="convert('upper')" class="btn-primary">MAJUSCULES</button>
+                <button onclick="convert('lower')" class="btn-primary">minuscules</button>
+                <button onclick="convert('cap')" class="btn-primary">Capitaliser</button>
+                <button onclick="convert('alt')" class="btn-primary">aLtErNé</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        const txt = document.getElementById('text-input');
+        function convert(mode) {
+            let val = txt.value;
+            if (mode === 'upper') val = val.toUpperCase();
+            if (mode === 'lower') val = val.toLowerCase();
+            if (mode === 'cap') val = val.toLowerCase().replace(/(^\w|\s\w)/g, m => m.toUpperCase());
+            if (mode === 'alt') val = val.split('').map((c, i) => i % 2 ? c.toLowerCase() : c.toUpperCase()).join('');
+            txt.value = val;
+        }
+    </script>
+</body>
+
+</html>
