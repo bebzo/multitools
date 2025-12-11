@@ -1,14 +1,119 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MultiTools - Test Déploiement</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiTools - La Boîte à Outils Gratuite</title>
+    <meta name="description"
+        content="Une collection d'outils en ligne gratuits : calculatrices, convertisseurs, et utilitaires pour développeurs.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <h1>✅ Déploiement réussi</h1>
-  <p>Si vous voyez cette page, GitHub Pages fonctionne correctement.</p>
-  <p><strong>Dépôt :</strong> bebzo/multitools</p>
-  <p><strong>Date :</strong> 11 décembre 2025</p>
+
+    <header>
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">
+                <span>⚡</span> MultiTools
+            </a>
+            <!-- Placeholder for future nav items -->
+            <nav>
+                <!-- <a href="#" class="btn-primary">A propos</a> -->
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Tous vos outils,<br>au même endroit.</h1>
+        <p>Une suite d'utilitaires gratuits, rapides et sans inscription pour simplifier votre quotidien.</p>
+    </section>
+
+    <main class="container">
+        <!-- Category: Finance -->
+        <h2>💰 Finance & Business</h2>
+        <div class="tools-grid">
+            <a href="tools/calcul-salaire.html" class="tool-card">
+                <div class="tool-icon">€</div>
+                <div class="tool-info">
+                    <div class="tool-title">Salaire Brut / Net</div>
+                    <div class="tool-desc">Calculez votre salaire net réel et le coût employeur en un clic.</div>
+                </div>
+                <div class="beta-tag">Populaire</div>
+            </a>
+
+            <a href="tools/calcul-tva.html" class="tool-card">
+                <div class="tool-icon" style="background: var(--secondary);">%</div>
+                <div class="tool-info">
+                    <div class="tool-title">Calculatrice TVA</div>
+                    <div class="tool-desc">HT vers TTC et inversement. Taux 20%, 10%, 5.5%.</div>
+                </div>
+            </a>
+
+            <a href="tools/simulateur-roi.html" class="tool-card">
+                <div class="tool-icon" style="background: var(--accent);">📈</div>
+                <div class="tool-info">
+                    <div class="tool-title">Simulateur ROI</div>
+                    <div class="tool-desc">Calculez la rentabilité de vos investissements instantanément.</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Category: Dev -->
+        <h2>👨‍💻 Développeurs</h2>
+        <div class="tools-grid">
+            <a href="tools/json-formatter.html" class="tool-card">
+                <div class="tool-icon" style="background: #202020;">{ }</div>
+                <div class="tool-info">
+                    <div class="tool-title">JSON Formatter</div>
+                    <div class="tool-desc">Validez et embellissez vos fichiers JSON.</div>
+                </div>
+            </a>
+            <a href="tools/password-generator.html" class="tool-card">
+                <div class="tool-icon" style="background: #202020;">🔑</div>
+                <div class="tool-info">
+                    <div class="tool-title">Générateur Mot de Passe</div>
+                    <div class="tool-desc">Créez des mots de passe ultra-sécurisés.</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Category: Text -->
+        <h2>📝 Rédaction & SEO</h2>
+        <div class="tools-grid">
+            <a href="tools/compteur-mots.html" class="tool-card">
+                <div class="tool-icon" style="background: var(--primary);">T</div>
+                <div class="tool-info">
+                    <div class="tool-title">Compteur de Mots</div>
+                    <div class="tool-desc">Analysez la longueur de vos textes (Mots, Caractères).</div>
+                </div>
+            </a>
+            <a href="tools/convertisseur-casse.html" class="tool-card">
+                <div class="tool-icon" style="background: var(--primary);">Aa</div>
+                <div class="tool-info">
+                    <div class="tool-title">Majuscule / Minuscule</div>
+                    <div class="tool-desc">Convertisseur de texte en un clic.</div>
+                </div>
+            </a>
+            <a href="tools/lorem-ipsum.html" class="tool-card">
+                <div class="tool-icon" style="background: var(--primary);">¶</div>
+                <div class="tool-info">
+                    <div class="tool-title">Lorem Ipsum</div>
+                    <div class="tool-desc">Générateur de faux texte pour vos maquettes.</div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MultiTools. Gratuit et sécurisé.</p>
+        </div>
+    </footer>
+
 </body>
+
 </html>
