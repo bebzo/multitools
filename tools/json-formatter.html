@@ -29,72 +29,168 @@
     </style>
 </head>
 
-<body>
-    <header>
-        <div class="container nav-flex">
-            <a href="../index.html" class="logo"><span>⚡</span> MultiTools</a>
-            <nav><a href="../index.html" class="btn-primary"
-                    style="background: transparent; color: var(--text-main); border: 1px solid var(--border);">←
-                    Retour</a></nav>
-        </div>
-    </header>
+<header>
+    <div class="container nav-flex">
+        <a href="../index.html" class="logo"><span>⚡</span> MultiTools</a>
+        <nav id="nav-menu">
+            <a href="../index.html">Accueil</a>
+            <a href="../index.html#finance">Finance</a>
+            <a href="../index.html#dev" class="active">Développeurs</a>
+            <a href="../index.html#redaction">Rédaction</a>
+        </nav>
+    </div>
+</header>
 
-    <main class="container">
-        <h1 style="margin-top: 40px;">JSON Formatter</h1>
+<main class="container">
+    <!-- Ad Placeholder (Top) -->
+    <div class="ad-banner">
+        <span>Publicité (Header)</span>
+    </div>
 
-        <div class="calc-panel" style="margin-top: 20px;">
-            <label for="json-input" style="font-weight: 600; margin-bottom: 8px; display: block;">Votre JSON (Collez
-                ici)</label>
-            <textarea id="json-input" class="json-editor" placeholder='{"example": "Collez votre JSON ici"}'></textarea>
+    <section class="calculator-layout">
+        <!-- Left: Tool + SEO -->
+        <div>
+            <h1>JSON Formatter</h1>
+            <p style="color: var(--text-muted); margin-bottom: 24px;">Validez, formater et minifiez vos données JSON en
+                un instant.</p>
 
-            <div class="actions">
-                <button onclick="formatJson()" class="btn-primary">Beautify (Format)</button>
-                <button onclick="minifyJson()" class="btn-primary"
-                    style="background: var(--bg-body); color: var(--text-main); border: 1px solid var(--border);">Minify</button>
-                <button onclick="copyToClipboard()" class="btn-primary"
-                    style="background: var(--secondary);">Copier</button>
+            <div class="calc-panel">
+                <label for="json-input" style="font-weight: 600; margin-bottom: 8px; display: block;">Votre JSON (Collez
+                    ici)</label>
+                <textarea id="json-input" class="json-editor"
+                    placeholder='{"example": "Collez votre JSON ici"}'></textarea>
+
+                <div class="actions">
+                    <button onclick="formatJson()" class="btn-primary">Beautify (Format)</button>
+                    <button onclick="minifyJson()" class="btn-primary"
+                        style="background: var(--bg-body); color: var(--text-main); border: 1px solid var(--border);">Minify</button>
+                    <button onclick="copyToClipboard()" class="btn-primary"
+                        style="background: var(--secondary);">Copier</button>
+                </div>
+
+                <div id="status-msg" style="margin-top: 10px; font-weight: 500;"></div>
             </div>
 
-            <div id="status-msg" style="margin-top: 10px; font-weight: 500;"></div>
+            <!-- SEO Content -->
+            <article class="tool-content">
+                <h2>Embellir et Valider son code JSON</h2>
+                <p>Le JSON (JavaScript Object Notation) est le format standard pour l'échange de données sur le web.
+                    Cependant, les APIs renvoient souvent du JSON "minifié" (sur une seule ligne) qui est illisible pour
+                    l'humain. Notre outil vous permet de le rendre propre et lisible.</p>
+
+                <h3>Différence entre "Beautify" et "Minify"</h3>
+                <ul>
+                    <li><strong>Beautify (Embellir) :</strong> Ajoute des retours à la ligne et des indentations
+                        (espaces) pour rendre la structure hiérarchique visible.</li>
+                    <li><strong>Minify (Minifier) :</strong> Supprime tous les espaces et sauts de ligne inutiles pour
+                        réduire la taille du fichier (idéal pour la production).</li>
+                </ul>
+
+                <h3>Erreurs JSON fréquentes</h3>
+                <p>Si notre validateur affiche une erreur, vérifiez ces points courants :</p>
+                <ul>
+                    <li>Une virgule en trop à la fin d'une liste ou d'un objet (trailing comma).</li>
+                    <li>Utilisation de guillemets simples (') au lieu de doubles ("). Le JSON standard impose les
+                        doubles.</li>
+                    <li>Clés non entourées de guillemets.</li>
+                </ul>
+
+                <h3>FAQ Développeur</h3>
+                <div class="faq-item">
+                    <span class="faq-question">Le code est-il exécuté sur le serveur ?</span>
+                    <p>Non, tout le traitement se fait en local dans votre navigateur via Javascript. Vos données
+                        sensibles ne quittent jamais votre ordinateur.</p>
+                </div>
+            </article>
         </div>
 
-    </main>
+        <!-- Right: Ads -->
+        <aside>
+            <div class="sidebar-ad">
+                <span>Publicité (Carrée)</span>
+            </div>
+            <div class="sidebar-ad" style="margin-top: 24px; height: 600px;">
+                <span>Publicité (Skyscraper)</span>
+            </div>
+        </aside>
+    </section>
 
-    <script>
-        const input = document.getElementById('json-input');
-        const status = document.getElementById('status-msg');
+    <!-- Ad Placeholder (Bottom) -->
+    <div class="ad-banner">
+        <span>Publicité (Bas de page)</span>
+    </div>
+</main>
 
-        function formatJson() {
-            try {
-                const obj = JSON.parse(input.value);
-                input.value = JSON.stringify(obj, null, 4);
-                status.textContent = "✅ JSON Valide et Formaté";
-                status.style.color = "green";
-            } catch (e) {
-                status.textContent = "❌ Erreur de syntaxe JSON";
-                status.style.color = "red";
-            }
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>MultiTools</h3>
+                <p>Une collection d'outils gratuits en ligne pour développeurs, rédacteurs et entrepreneurs. Simple,
+                    rapide, et respectueux de la vie privée.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Outils</h3>
+                <ul class="footer-links">
+                    <li><a href="calcul-salaire.html">Salaire Brut/Net</a></li>
+                    <li><a href="calcul-tva.html">Calcul TVA</a></li>
+                    <li><a href="json-formatter.html">JSON Formatter</a></li>
+                    <li><a href="password-generator.html">Générateur MDP</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Légal</h3>
+                <ul class="footer-links">
+                    <li><a href="../legal/mentions-legales.html">Mentions Légales</a></li>
+                    <li><a href="#">Confidentialité</a></li>
+                    <li><a href="../legal/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>À Propos</h3>
+                <p>Développé pour simplifier vos tâches quotidiennes. 100% gratuit.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 MultiTools. Tous droits réservés.
+        </div>
+    </div>
+</footer>
+
+<script>
+    const input = document.getElementById('json-input');
+    const status = document.getElementById('status-msg');
+
+    function formatJson() {
+        try {
+            const obj = JSON.parse(input.value);
+            input.value = JSON.stringify(obj, null, 4);
+            status.textContent = "✅ JSON Valide et Formaté";
+            status.style.color = "green";
+        } catch (e) {
+            status.textContent = "❌ Erreur de syntaxe JSON";
+            status.style.color = "red";
         }
+    }
 
-        function minifyJson() {
-            try {
-                const obj = JSON.parse(input.value);
-                input.value = JSON.stringify(obj);
-                status.textContent = "✅ JSON Minifié";
-                status.style.color = "green";
-            } catch (e) {
-                status.textContent = "❌ Erreur de syntaxe JSON";
-                status.style.color = "red";
-            }
+    function minifyJson() {
+        try {
+            const obj = JSON.parse(input.value);
+            input.value = JSON.stringify(obj);
+            status.textContent = "✅ JSON Minifié";
+            status.style.color = "green";
+        } catch (e) {
+            status.textContent = "❌ Erreur de syntaxe JSON";
+            status.style.color = "red";
         }
+    }
 
-        function copyToClipboard() {
-            input.select();
-            document.execCommand('copy');
-            status.textContent = "📋 Copié dans le presse-papier";
-            status.style.color = "var(--text-main)";
-        }
-    </script>
-</body>
+    function copyToClipboard() {
+        input.select();
+        document.execCommand('copy');
+        status.textContent = "📋 Copié dans le presse-papier";
+        status.style.color = "var(--text-main)";
+    }
+</script>
 
 </html>

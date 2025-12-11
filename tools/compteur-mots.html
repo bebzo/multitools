@@ -14,34 +14,133 @@
     <header>
         <div class="container nav-flex">
             <a href="../index.html" class="logo"><span>⚡</span> MultiTools</a>
-            <nav><a href="../index.html" class="btn-primary"
-                    style="background: transparent; color: var(--text-main); border: 1px solid var(--border);">←
-                    Retour</a></nav>
+            <nav id="nav-menu">
+                <a href="../index.html">Accueil</a>
+                <a href="../index.html#finance">Finance</a>
+                <a href="../index.html#dev">Développeurs</a>
+                <a href="../index.html#redaction" class="active">Rédaction</a>
+            </nav>
         </div>
     </header>
+
     <main class="container">
-        <h1>Compteur de Mots</h1>
-        <div class="calc-panel">
-            <textarea id="text-input"
-                style="width: 100%; height: 300px; padding: 16px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-family: inherit; font-size: 1rem;"
-                placeholder="Tapez ou collez votre texte ici..."></textarea>
-            <div class="result-box"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; text-align: center;">
-                <div>
-                    <div class="result-value" id="count-words">0</div>
-                    <div class="result-label">Mots</div>
+        <!-- Ad Placeholder (Top) -->
+        <div class="ad-banner">
+            <span>Publicité (Header)</span>
+        </div>
+
+        <section class="calculator-layout">
+            <!-- Left: Tool + SEO -->
+            <div>
+                <h1>Compteur de Mots</h1>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">Analysez vos textes en temps réel : nombre de
+                    mots, caractères, lignes.</p>
+
+                <div class="calc-panel">
+                    <textarea id="text-input"
+                        style="width: 100%; height: 300px; padding: 16px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-family: inherit; font-size: 1rem; resize: vertical;"
+                        placeholder="Tapez ou collez votre texte ici..."></textarea>
+
+                    <div class="result-box"
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; text-align: center;">
+                        <div>
+                            <div class="result-value" id="count-words">0</div>
+                            <div class="result-label">Mots</div>
+                        </div>
+                        <div>
+                            <div class="result-value" id="count-chars">0</div>
+                            <div class="result-label">Caractères</div>
+                        </div>
+                        <div>
+                            <div class="result-value" id="count-lines">0</div>
+                            <div class="result-label">Lignes</div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <div class="result-value" id="count-chars">0</div>
-                    <div class="result-label">Caractères</div>
-                </div>
-                <div>
-                    <div class="result-value" id="count-lines">0</div>
-                    <div class="result-label">Lignes</div>
-                </div>
+
+                <!-- SEO Content -->
+                <article class="tool-content">
+                    <h2>Pourquoi utiliser un compteur de mots en ligne ?</h2>
+                    <p>Que vous soyez rédacteur web, étudiant, journaliste ou community manager, respecter une limite de
+                        caractères ou de mots est souvent crucial. Ce compteur gratuit et instantané vous permet de
+                        vérifier la longueur de vos textes sans rien installer.</p>
+
+                    <h3>Limites courantes (Réseaux Sociaux & SEO)</h3>
+                    <ul>
+                        <li><strong>Twitter (X) :</strong> 280 caractères max.</li>
+                        <li><strong>Meta Description (SEO) :</strong> Entre 150 et 160 caractères recommandés.</li>
+                        <li><strong>Article de Blog SEO :</strong> Google privilégie souvent les articles de fond de
+                            plus de 1500 mots.</li>
+                        <li><strong>LinkedIn (Post) :</strong> Jusqu'à 3000 caractères.</li>
+                    </ul>
+
+                    <h3>Différence entre "Mots" et "Caractères"</h3>
+                    <p>Le nombre de caractères inclut toutes les lettres, chiffres, ponctuation et espaces. Le nombre de
+                        mots compte les groupes de caractères séparés par des espaces. Attention : certains traitements
+                        de texte comptent différemment les apostrophes.</p>
+
+                    <h3>FAQ Rédaction</h3>
+                    <div class="faq-item">
+                        <span class="faq-question">Ce compteur inclut-il les espaces ?</span>
+                        <p>Le compteur "Caractères" affiché ci-dessus inclut les espaces. C'est la métrique standard
+                            pour les limites imposées par les formulaires ou les réseaux sociaux.</p>
+                    </div>
+                </article>
             </div>
+
+            <!-- Right: Ads -->
+            <aside>
+                <div class="sidebar-ad">
+                    <span>Publicité (Carrée)</span>
+                </div>
+                <div class="sidebar-ad" style="margin-top: 24px; height: 600px;">
+                    <span>Publicité (Skyscraper)</span>
+                </div>
+            </aside>
+        </section>
+
+        <!-- Ad Placeholder (Bottom) -->
+        <div class="ad-banner">
+            <span>Publicité (Bas de page)</span>
         </div>
     </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MultiTools</h3>
+                    <p>Une collection d'outils gratuits en ligne pour développeurs, rédacteurs et entrepreneurs. Simple,
+                        rapide, et respectueux de la vie privée.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Outils</h3>
+                    <ul class="footer-links">
+                        <li><a href="calcul-salaire.html">Salaire Brut/Net</a></li>
+                        <li><a href="calcul-tva.html">Calcul TVA</a></li>
+                        <li><a href="json-formatter.html">JSON Formatter</a></li>
+                        <li><a href="password-generator.html">Générateur MDP</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Légal</h3>
+                    <ul class="footer-links">
+                        <li><a href="../legal/mentions-legales.html">Mentions Légales</a></li>
+                        <li><a href="#">Confidentialité</a></li>
+                        <li><a href="../legal/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>À Propos</h3>
+                    <p>Développé pour simplifier vos tâches quotidiennes. 100% gratuit.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 MultiTools. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
     <script>
         const txt = document.getElementById('text-input');
         const vals = {

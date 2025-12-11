@@ -14,12 +14,12 @@
   --border: hsl(220, 20%, 90%);
 
   /* Effects */
-  --shadow-sm: 0 2px 4px rgba(0,0,0,0.02);
-  --shadow-md: 0 8px 16px rgba(0,0,0,0.04);
-  --shadow-lg: 0 16px 32px rgba(0,0,0,0.08);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.08);
   --glass: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(255, 255, 255, 0.5);
-  
+
   /* Spacing */
   --radius-xs: 4px;
   --radius-sm: 8px;
@@ -56,7 +56,9 @@ body {
 }
 
 /* Typography */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   line-height: 1.2;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -65,6 +67,7 @@ h1, h2, h3 {
 h1 {
   font-size: 2.5rem;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0.5em;
@@ -239,7 +242,8 @@ header {
   align-items: center;
 }
 
-.input-wrapper input, .input-wrapper select {
+.input-wrapper input,
+.input-wrapper select {
   width: 100%;
   padding: 12px 16px;
   font-size: 1rem;
@@ -250,7 +254,8 @@ header {
   transition: border-color 0.2s;
 }
 
-.input-wrapper input:focus, .input-wrapper select:focus {
+.input-wrapper input:focus,
+.input-wrapper select:focus {
   outline: none;
   border-color: var(--primary);
 }
@@ -328,11 +333,143 @@ header {
   opacity: 0.9;
 }
 
+/* Navigation */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--primary);
+}
+
+/* Rich Footer */
 footer {
   margin-top: auto;
-  padding: 40px 0;
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 0.9rem;
+  background: var(--bg-card);
   border-top: 1px solid var(--border);
+  padding: 60px 0 20px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-col h3 {
+  font-size: 1rem;
+  color: var(--text-main);
+  margin-bottom: 16px;
+}
+
+.footer-col p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* AdSense Placeholders & SEO Content */
+.ad-banner {
+  background: var(--bg-card);
+  height: 90px;
+  margin: 20px 0;
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.tool-content {
+  background: var(--bg-card);
+  padding: 32px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  margin-top: 40px;
+}
+
+.tool-content h2,
+.tool-content h3 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+  background: none;
+  -webkit-text-fill-color: initial;
+  color: var(--text-main);
+}
+
+.tool-content p {
+  margin-bottom: 16px;
+  color: var(--text-muted);
+}
+
+.tool-content ul {
+  margin-bottom: 16px;
+  padding-left: 20px;
+  color: var(--text-muted);
+}
+
+.tool-content li {
+  margin-bottom: 8px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 8px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .ad-banner {
+    height: 60px;
+    /* Smaller on mobile */
+  }
 }

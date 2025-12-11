@@ -20,10 +20,11 @@
             <a href="../index.html" class="logo">
                 <span>⚡</span> MultiTools
             </a>
-            <nav>
-                <a href="../index.html" class="btn-primary"
-                    style="background: transparent; color: var(--text-main); border: 1px solid var(--border);">←
-                    Retour</a>
+            <nav id="nav-menu">
+                <a href="../index.html">Accueil</a>
+                <a href="../index.html#finance" class="active">Finance</a>
+                <a href="../index.html#dev">Développeurs</a>
+                <a href="../index.html#redaction">Rédaction</a>
             </nav>
         </div>
     </header>
@@ -31,17 +32,17 @@
     <main class="container">
 
         <!-- Ad Placeholder (Top) -->
-        <div
-            style="background: var(--bg-card); height: 90px; margin: 20px 0; border-radius: var(--radius-sm); border: 1px dashed var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-muted);">
-            Espace Publicitaire (AdSense Leaderboard)
+        <div class="ad-banner">
+            <span>Publicité (Header)</span>
         </div>
 
         <section class="calculator-layout">
 
-            <!-- Left: Calculator -->
+            <!-- Left: Calculator + SEO Content -->
             <div>
                 <h1>Calculateur Brut / Net</h1>
-                <p style="color: var(--text-muted); margin-bottom: 24px;">Estimation rapide pour 2025 (France).</p>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">Estimation rapide pour 2025 (France) incluant
+                    le Prélèvement à la Source.</p>
 
                 <div class="calc-panel">
                     <div class="input-group">
@@ -66,7 +67,7 @@
                             <label for="status">Statut</label>
                             <div class="input-wrapper">
                                 <select id="status">
-                                    <option value="non-cadre">Non Cardre</option>
+                                    <option value="non-cadre">Non Cadre</option>
                                     <option value="cadre">Cadre</option>
                                 </select>
                             </div>
@@ -97,33 +98,101 @@
                             familiale.
                         </p>
                     </div>
-
                 </div>
 
-                <!-- Content for SEO below tool -->
-                <div style="margin-top: 40px; color: var(--text-muted);">
-                    <h3>Pourquoi calculer son salaire net ?</h3>
-                    <p>En France, la différence entre le salaire brut (annoncé en entretien) et le net (ce qui arrive
-                        sur le compte) est importante. Les charges sociales représentent environ 22% à 25% du brut.</p>
-                </div>
+                <!-- SEO Content -->
+                <article class="tool-content">
+                    <h2>Comprendre le passage du Brut au Net en 2025</h2>
+                    <p>En France, la différence entre le salaire brut (celui négocié lors de l'embauche) et le salaire
+                        net (celui qui arrive réellement sur votre compte bancaire) est significative. Elle est due aux
+                        charges sociales salariales et, depuis 2019, au prélèvement à la source de l'impôt sur le
+                        revenu.</p>
+
+                    <h3>Charges Sociales : Cadre vs Non-Cadre</h3>
+                    <p>Le statut influe directement sur le montant des cotisations :</p>
+                    <ul>
+                        <li><strong>Non-Cadre :</strong> Les charges représentent environ 22% à 23% du salaire brut.
+                        </li>
+                        <li><strong>Cadre :</strong> Les charges sont légèrement plus élevées (environ 25%) en raison
+                            des cotisations spécifiques à la prévoyance et à l'APEC.</li>
+                    </ul>
+
+                    <h3>Comment est calculé le « Net Avant Impôt » ?</h3>
+                    <p>C'est le montant restant après déduction de toutes les cotisations sociales (Santé, Retraite,
+                        Chômage, CSG/CRDS). C'était le chiffre inscrit en bas de la fiche de paie avant la réforme de
+                        l'impôt à la source.</p>
+
+                    <h3>Le Prélèvement à la Source (PAS)</h3>
+                    <p>Désormais, l'impôt sur le revenu est directement déduit du salaire. Notre simulateur applique un
+                        taux neutre par défaut correspondant à un célibataire sans enfant. Votre taux réel peut varier
+                        selon votre situation familiale déclarée aux impôts.</p>
+
+                    <h3>FAQ Salaire</h3>
+                    <div class="faq-item">
+                        <span class="faq-question">Quelle est la différence entre le Brut et le Net ?</span>
+                        <p>Le Brut est le salaire contractuel. Le Net est ce que vous touchez réellement après déduction
+                            des charges sociales (environ -23%).</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">Le coût employeur, c'est quoi ?</span>
+                        <p>Aussi appelé "Super Brut", c'est le montant total que l'entreprise dépense pour vous
+                            employer. Il inclut le salaire brut + les charges patronales (environ 25% à 42% du brut
+                            selon les aides).</p>
+                    </div>
+                </article>
             </div>
 
             <!-- Right: Sidebar Ads -->
             <aside>
                 <div class="sidebar-ad">
-                    Pub Carrée (300x250)
+                    <span>Publicité (Carrée)</span>
                 </div>
                 <div class="sidebar-ad" style="margin-top: 24px; height: 600px;">
-                    Pub Verticale (Skyscraper)
+                    <span>Publicité (Skyscraper)</span>
                 </div>
             </aside>
 
         </section>
+
+        <!-- Ad Placeholder (Bottom) -->
+        <div class="ad-banner">
+            <span>Publicité (Bas de page)</span>
+        </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 MultiTools.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MultiTools</h3>
+                    <p>Une collection d'outils gratuits en ligne pour développeurs, rédacteurs et entrepreneurs. Simple,
+                        rapide, et respectueux de la vie privée.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Outils</h3>
+                    <ul class="footer-links">
+                        <li><a href="calcul-salaire.html">Salaire Brut/Net</a></li>
+                        <li><a href="calcul-tva.html">Calcul TVA</a></li>
+                        <li><a href="json-formatter.html">JSON Formatter</a></li>
+                        <li><a href="password-generator.html">Générateur MDP</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Légal</h3>
+                    <ul class="footer-links">
+                        <li><a href="../legal/mentions-legales.html">Mentions Légales</a></li>
+                        <li><a href="#">Confidentialité</a></li>
+                        <li><a href="../legal/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>À Propos</h3>
+                    <p>Développé pour simplifier vos tâches quotidiennes. 100% gratuit.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 MultiTools. Tous droits réservés.
+            </div>
         </div>
     </footer>
 

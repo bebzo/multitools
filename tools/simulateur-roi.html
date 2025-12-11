@@ -18,20 +18,28 @@
     <header>
         <div class="container nav-flex">
             <a href="../index.html" class="logo"><span>⚡</span> MultiTools</a>
-            <nav><a href="../index.html" class="btn-primary"
-                    style="background: transparent; color: var(--text-main); border: 1px solid var(--border);">←
-                    Retour</a></nav>
+            <nav id="nav-menu">
+                <a href="../index.html">Accueil</a>
+                <a href="../index.html#finance" class="active">Finance</a>
+                <a href="../index.html#dev">Développeurs</a>
+                <a href="../index.html#redaction">Rédaction</a>
+            </nav>
         </div>
     </header>
 
     <main class="container">
-        <div
-            style="background: var(--bg-card); height: 90px; margin: 20px 0; border-radius: var(--radius-sm); border: 1px dashed var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-muted);">
-            Espace Publicitaire</div>
+        <!-- Ad Placeholder (Top) -->
+        <div class="ad-banner">
+            <span>Publicité (Header)</span>
+        </div>
 
         <section class="calculator-layout">
+            <!-- Left: Tool + SEO -->
             <div>
                 <h1>Simulateur ROI</h1>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">Calculez simplement la rentabilité de vos
+                    investissements (Immobilier, Bourse, Ads).</p>
+
                 <div class="calc-panel">
                     <div class="input-group">
                         <label for="invested">Montant Investi (Coût)</label>
@@ -59,12 +67,87 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- SEO Content -->
+                <article class="tool-content">
+                    <h2>Qu'est-ce que le ROI (Retour sur Investissement) ?</h2>
+                    <p>Le ROI (Return On Investment) est l'indicateur financier numéro un pour mesurer l'efficacité d'un
+                        investissement. Il permet de savoir combien vous avez gagné (ou perdu) par rapport à la somme
+                        engagée initialement.</p>
+
+                    <h3>La Formule du ROI</h3>
+                    <p>Le calcul est universel :</p>
+                    <p><code>ROI (%) = ((Gain Final - Montant Investi) / Montant Investi) x 100</code></p>
+
+                    <h3>Comment interpréter le résultat ?</h3>
+                    <ul>
+                        <li><strong>ROI Positif (> 0%) :</strong> Votre opération est rentable. Pour 100€ investis, vous
+                            avez récupéré votre mise + un bénéfice.</li>
+                        <li><strong>ROI Négatif (< 0%) :</strong> Vous avez perdu de l'argent. Le montant récupéré est
+                                    inférieur au montant investi.</li>
+                    </ul>
+
+                    <h3>FAQ Finance</h3>
+                    <div class="faq-item">
+                        <span class="faq-question">Quelle est un bon ROI ?</span>
+                        <p>Tout dépend du secteur. En Bourse, 7-8% par an est excellent. En e-commerce (Publicité), on
+                            vise souvent un ROI de 300% (soit x3) pour couvrir les frais annexes.</p>
+                    </div>
+                </article>
             </div>
+
+            <!-- Right: Ads -->
             <aside>
-                <div class="sidebar-ad">Pub Carrée</div>
+                <div class="sidebar-ad">
+                    <span>Publicité (Carrée)</span>
+                </div>
+                <div class="sidebar-ad" style="margin-top: 24px; height: 600px;">
+                    <span>Publicité (Skyscraper)</span>
+                </div>
             </aside>
         </section>
+
+        <!-- Ad Placeholder (Bottom) -->
+        <div class="ad-banner">
+            <span>Publicité (Bas de page)</span>
+        </div>
     </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MultiTools</h3>
+                    <p>Une collection d'outils gratuits en ligne pour développeurs, rédacteurs et entrepreneurs. Simple,
+                        rapide, et respectueux de la vie privée.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Outils</h3>
+                    <ul class="footer-links">
+                        <li><a href="calcul-salaire.html">Salaire Brut/Net</a></li>
+                        <li><a href="calcul-tva.html">Calcul TVA</a></li>
+                        <li><a href="json-formatter.html">JSON Formatter</a></li>
+                        <li><a href="password-generator.html">Générateur MDP</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Légal</h3>
+                    <ul class="footer-links">
+                        <li><a href="../legal/mentions-legales.html">Mentions Légales</a></li>
+                        <li><a href="#">Confidentialité</a></li>
+                        <li><a href="../legal/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>À Propos</h3>
+                    <p>Développé pour simplifier vos tâches quotidiennes. 100% gratuit.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 MultiTools. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
 
     <script>
         const inputs = [document.getElementById('invested'), document.getElementById('returned')];

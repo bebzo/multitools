@@ -9,38 +9,133 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
-    <header>
-        <div class="container nav-flex">
-            <a href="../index.html" class="logo"><span>⚡</span> MultiTools</a>
-            <nav><a href="../index.html" class="btn-primary"
-                    style="background: transparent; color: var(--text-main); border: 1px solid var(--border);">←
-                    Retour</a></nav>
-        </div>
-    </header>
-    <main class="container">
-        <h1>Générateur Lorem Ipsum</h1>
-        <div class="calc-panel">
-            <div class="input-group">
-                <label>Nombre de paragraphes</label>
-                <input type="number" id="num-paras" value="3" min="1" max="20"
-                    style="padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--border);">
-                <button onclick="generate()" class="btn-primary" style="margin-left: 10px;">Générer</button>
+<header>
+    <div class="container nav-flex">
+        <a href="../index.html" class="logo"><span>⚡</span> MultiTools</a>
+        <nav id="nav-menu">
+            <a href="../index.html">Accueil</a>
+            <a href="../index.html#finance">Finance</a>
+            <a href="../index.html#dev">Développeurs</a>
+            <a href="../index.html#redaction" class="active">Rédaction</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <!-- Ad Placeholder (Top) -->
+    <div class="ad-banner">
+        <span>Publicité (Header)</span>
+    </div>
+
+    <section class="calculator-layout">
+        <!-- Left: Tool + SEO -->
+        <div>
+            <h1>Générateur Lorem Ipsum</h1>
+            <p style="color: var(--text-muted); margin-bottom: 24px;">Générez du faux texte pour vos maquettes (Web,
+                Print, Design).</p>
+
+            <div class="calc-panel">
+                <div class="input-group">
+                    <label>Nombre de paragraphes</label>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <input type="number" id="num-paras" value="3" min="1" max="20"
+                            style="padding: 10px; border-radius: var(--radius-sm); border: 1px solid var(--border); width: 80px;">
+                        <button onclick="generate()" class="btn-primary">Générer</button>
+                    </div>
+                </div>
+                <textarea id="output" readonly
+                    style="width: 100%; height: 300px; padding: 16px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-body); margin-top: 20px; resize: vertical;"></textarea>
             </div>
-            <textarea id="output" readonly
-                style="width: 100%; height: 300px; padding: 16px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-body);"></textarea>
+
+            <!-- SEO Content -->
+            <article class="tool-content">
+                <h2>Qu'est-ce que le Lorem Ipsum ?</h2>
+                <p>Le Lorem Ipsum est le faux texte standard de l'imprimerie et de la composition numérique depuis les
+                    années 1500. Il est utilisé par les designers graphiques et les développeurs web pour remplir les
+                    espaces de texte d'une maquette afin de se concentrer sur la mise en page (layout) sans être
+                    distrait par le contenu lisible.</p>
+
+                <h3>D'où vient ce texte ?</h3>
+                <p>Contrairement à une idée répandue, ce n'est pas du charabia aléatoire. Il trouve ses racines dans un
+                    texte de littérature latine classique datant de 45 av. J.-C., écrit par Cicéron : "De finibus
+                    bonorum et malorum" (Des frontières du bien et du mal).</p>
+
+                <h3>Pourquoi l'utiliser ?</h3>
+                <p>On utilise le Lorem Ipsum parce qu'il offre une distribution des lettres plus ou moins normale,
+                    contrairement à une répétition comme "Ici votre texte ici votre texte". Cela donne l'illusion d'un
+                    texte français ou anglais standard.</p>
+
+                <h3>FAQ Lorem</h3>
+                <div class="faq-item">
+                    <span class="faq-question">Que veut dire "Lorem Ipsum" ?</span>
+                    <p>C'est une version tronquée de "Dolorem Ipsum", qui signifie "La douleur elle-même".</p>
+                </div>
+            </article>
         </div>
-    </main>
-    <script>
-        const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-        function generate() {
-            const count = document.getElementById('num-paras').value;
-            let res = [];
-            for (let i = 0; i < count; i++) res.push(lorem);
-            document.getElementById('output').value = res.join('\n\n');
-        }
-        generate();
-    </script>
+
+        <!-- Right: Ads -->
+        <aside>
+            <div class="sidebar-ad">
+                <span>Publicité (Carrée)</span>
+            </div>
+            <div class="sidebar-ad" style="margin-top: 24px; height: 600px;">
+                <span>Publicité (Skyscraper)</span>
+            </div>
+        </aside>
+    </section>
+
+    <!-- Ad Placeholder (Bottom) -->
+    <div class="ad-banner">
+        <span>Publicité (Bas de page)</span>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>MultiTools</h3>
+                <p>Une collection d'outils gratuits en ligne pour développeurs, rédacteurs et entrepreneurs. Simple,
+                    rapide, et respectueux de la vie privée.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Outils</h3>
+                <ul class="footer-links">
+                    <li><a href="calcul-salaire.html">Salaire Brut/Net</a></li>
+                    <li><a href="calcul-tva.html">Calcul TVA</a></li>
+                    <li><a href="json-formatter.html">JSON Formatter</a></li>
+                    <li><a href="password-generator.html">Générateur MDP</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Légal</h3>
+                <ul class="footer-links">
+                    <li><a href="../legal/mentions-legales.html">Mentions Légales</a></li>
+                    <li><a href="#">Confidentialité</a></li>
+                    <li><a href="../legal/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>À Propos</h3>
+                <p>Développé pour simplifier vos tâches quotidiennes. 100% gratuit.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 MultiTools. Tous droits réservés.
+        </div>
+    </div>
+</footer>
+
+<script>
+    const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+    function generate() {
+        const count = document.getElementById('num-paras').value;
+        let res = [];
+        for (let i = 0; i < count; i++) res.push(lorem);
+        document.getElementById('output').value = res.join('\n\n');
+    }
+    generate();
+</script>
 </body>
 
 </html>
