@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Formatter - Beautify and Validate JSON Online</title>
+    <meta name="description"
+        content="Free JSON formatter. Beautify, minify, and validate your JSON instantly. Perfect for developers and API debugging.">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="alternate" hreflang="fr" href="../../tools/json-formatter.html">
+    <link rel="alternate" hreflang="en" href="json-formatter.html">
+    <style>
+        .json-editor {
+            width: 100%;
+            min-height: 300px;
+            font-family: 'Courier New', monospace;
+            padding: 16px;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-sm);
+            background: var(--bg-body);
+            color: var(--text-main);
+            resize: vertical;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav-flex">
+            <a href="../index.html" class="logo"><span>⚡</span> MultiTools</a>
+            <nav id="nav-menu">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#finance">Finance</a>
+                <a href="../index.html#dev" class="active">Developers</a>
+                <a href="../index.html#writing">Writing</a>
+                <a href="../../tools/json-formatter.html"
+                    style="margin-left: 20px; padding: 6px 12px; background: var(--bg-body); border-radius: 6px;">🇫🇷
+                    FR</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="ad-banner"><span>Advertisement (Header)</span></div>
+
+        <section class="calculator-layout">
+            <div>
+                <h1>JSON Formatter</h1>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">Validate, format, and minify your JSON data
+                    instantly.</p>
+
+                <div class="calc-panel">
+                    <label for="json-input" style="font-weight: 600; margin-bottom: 8px; display: block;">Your JSON
+                        (Paste here)</label>
+                    <textarea id="json-input" class="json-editor"
+                        placeholder='{"example": "Paste your JSON here"}'></textarea>
+
+                    <div class="actions">
+                        <button onclick="formatJson()" class="btn-primary">Beautify (Format)</button>
+                        <button onclick="minifyJson()" class="btn-primary"
+                            style="background: var(--bg-body); color: var(--text-main); border: 1px solid var(--border);">Minify</button>
+                        <button onclick="copyToClipboard()" class="btn-primary"
+                            style="background: var(--secondary);">Copy</button>
+                    </div>
+
+                    <div id="status-msg" style="margin-top: 10px; font-weight: 500;"></div>
+                </div>
+
+                <article class="tool-content">
+                    <h2>Beautify and Validate Your JSON Code</h2>
+                    <p>JSON (JavaScript Object Notation) is the standard format for data exchange on the web. However,
+                        APIs often return "minified" JSON (on a single line) that's unreadable for humans. Our tool
+                        allows you to make it clean and readable. Used by millions of developers, JSON is <strong>the
+                            universal language of modern APIs</strong> (REST, GraphQL, etc.).</p>
+                    <p>Whether you're debugging an API, checking a server response, or preparing data for a
+                        configuration file, our JSON Formatter saves you precious time.</p>
+
+                    <h3>Difference Between "Beautify" and "Minify"</h3>
+                    <ul>
+                        <li><strong>Beautify:</strong> Adds indentation and line breaks to make JSON human-readable.
+                            Perfect for debugging.</li>
+                        <li><strong>Minify:</strong> Removes all spaces and line breaks to reduce file size. Ideal for
+                            production.</li>
+                    </ul>
+
+                    <h3>Common JSON Errors</h3>
+                    <p>Our validator instantly detects:</p>
+                    <ul>
+                        <li>Missing or extra commas</li>
+                        <li>Single quotes instead of double quotes</li>
+                        <li>Keys not surrounded by quotes</li>
+                    </ul>
+
+                    <h3>Why Validate Your JSON?</h3>
+                    <p>Invalid JSON causes errors in your application. The most common errors are: trailing comma,
+                        single quotes instead of double, keys not surrounded by quotes. Our validator instantly detects
+                        these problems and indicates the concerned line.</p>
+                    <p><strong>Common use cases:</strong> Debug an API response, prepare a configuration file
+                        (package.json, tsconfig.json), format data for database import.</p>
+
+                    <h3>Developer FAQ</h3>
+                    <div class="faq-item">
+                        <span class="faq-question">Is the code executed on the server?</span>
+                        <p>No, everything happens in your browser (Client-side). Your JSON is never sent to our servers.
+                            Total privacy guaranteed.</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">What's the difference between JSON and XML?</span>
+                        <p>JSON is lighter, more readable, and faster to parse than XML. That's why it replaced XML in
+                            most modern APIs. JSON uses braces {} and brackets [], while XML uses tags <>.</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">Can you put comments in JSON?</span>
+                        <p>No, standard JSON doesn't support comments. Some parsers (like JSON5) allow it, but it's not
+                            recommended for compatibility. Use a "_comment" key if necessary.</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">How to quickly copy formatted JSON?</span>
+                        <p>Use the "Copy" button after beautifying your JSON. The content will be copied to your
+                            clipboard and ready to paste into your code editor.</p>
+                    </div>
+                </article>
+            </div>
+
+            <aside>
+                <div class="sidebar-ad"><span>Advertisement (Square)</span></div>
+                <div class="sidebar-ad" style="margin-top: 20px; height: 600px;"><span>Advertisement (Skyscraper)</span>
+                </div>
+            </aside>
+        </section>
+
+        <div class="ad-banner"><span>Advertisement (Bottom)</span></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MultiTools</h3>
+                    <p>A collection of free online tools for developers, writers, and entrepreneurs.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="salary-calculator.html">Gross/Net Salary</a></li>
+                        <li><a href="vat-calculator.html">VAT Calculator</a></li>
+                        <li><a href="json-formatter.html">JSON Formatter</a></li>
+                        <li><a href="password-generator.html">Password Generator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="../legal/legal-notice.html">Legal Notice</a></li>
+                        <li><a href="../legal/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../legal/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>About</h3>
+                    <p>Developed to simplify your daily tasks. 100% free.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2025 MultiTools.</div>
+        </div>
+    </footer>
+
+    <script>
+        const statusMsg = document.getElementById('status-msg');
+        const input = document.getElementById('json-input');
+
+        function formatJson() {
+            try {
+                const obj = JSON.parse(input.value);
+                input.value = JSON.stringify(obj, null, 2);
+                statusMsg.textContent = '✅ JSON formatted successfully!';
+                statusMsg.style.color = 'green';
+            } catch (e) {
+                statusMsg.textContent = '❌ Invalid JSON: ' + e.message;
+                statusMsg.style.color = 'red';
+            }
+        }
+
+        function minifyJson() {
+            try {
+                const obj = JSON.parse(input.value);
+                input.value = JSON.stringify(obj);
+                statusMsg.textContent = '✅ JSON minified!';
+                statusMsg.style.color = 'green';
+            } catch (e) {
+                statusMsg.textContent = '❌ Invalid JSON: ' + e.message;
+                statusMsg.style.color = 'red';
+            }
+        }
+
+        function copyToClipboard() {
+            input.select();
+            document.execCommand('copy');
+            statusMsg.textContent = '✅ Copied to clipboard!';
+            statusMsg.style.color = 'green';
+        }
+    </script>
+</body>
+
+</html>

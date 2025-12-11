@@ -1,48 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <!-- French Pages -->
     <url>
         <loc>https://bebzo.github.io/multitools/index.html</loc>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://bebzo.github.io/multitools/index.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bebzo.github.io/multitools/en/index.html"/>
         <priority>1.0</priority>
-        <changefreq>weekly</changefreq>
     </url>
+    <url><loc>https://bebzo.github.io/multitools/tools/calcul-salaire.html</loc><priority>0.8</priority></url>
+    <url><loc>https://bebzo.github.io/multitools/tools/calcul-tva.html</loc><priority>0.8</priority></url>
+    <url><loc>https://bebzo.github.io/multitools/tools/simulateur-roi.html</loc><priority>0.8</priority></url>
+    <url><loc>https://bebzo.github.io/multitools/tools/json-formatter.html</loc><priority>0.8</priority></url>
+    <url><loc>https://bebzo.github.io/multitools/tools/password-generator.html</loc><priority>0.8</priority></url>
+    <url><loc>https://bebzo.github.io/multitools/tools/compteur-mots.html</loc><priority>0.8</priority></url>
+    <url><loc>https://bebzo.github.io/multitools/tools/convertisseur-casse.html</loc><priority>0.8</priority></url>
+    <url><loc>https://bebzo.github.io/multitools/tools/lorem-ipsum.html</loc><priority>0.8</priority></url>
+    
+    <!-- English Pages -->
     <url>
-        <loc>https://bebzo.github.io/multitools/tools/calcul-salaire.html</loc>
-        <priority>0.8</priority>
-        <changefreq>monthly</changefreq>
+        <loc>https://bebzo.github.io/multitools/en/index.html</loc>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://bebzo.github.io/multitools/index.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bebzo.github.io/multitools/en/index.html"/>
+        <priority>1.0</priority>
     </url>
-    <url>
-        <loc>https://bebzo.github.io/multitools/tools/calcul-tva.html</loc>
-        <priority>0.8</priority>
-        <changefreq>monthly</changefreq>
-    </url>
-    <url>
-        <loc>https://bebzo.github.io/multitools/tools/simulateur-roi.html</loc>
-        <priority>0.8</priority>
-        <changefreq>monthly</changefreq>
-    </url>
-    <url>
-        <loc>https://bebzo.github.io/multitools/tools/json-formatter.html</loc>
-        <priority>0.8</priority>
-        <changefreq>monthly</changefreq>
-    </url>
-    <url>
-        <loc>https://bebzo.github.io/multitools/tools/password-generator.html</loc>
-        <priority>0.8</priority>
-        <changefreq>monthly</changefreq>
-    </url>
-    <url>
-        <loc>https://bebzo.github.io/multitools/tools/compteur-mots.html</loc>
-        <priority>0.8</priority>
-        <changefreq>monthly</changefreq>
-    </url>
-    <url>
-        <loc>https://bebzo.github.io/multitools/tools/convertisseur-casse.html</loc>
-        <priority>0.8</priority>
-        <changefreq>monthly</changefreq>
-    </url>
-    <url>
-        <loc>https://bebzo.github.io/multitools/tools/lorem-ipsum.html</loc>
-        <priority>0.8</priority>
-        <changefreq>monthly</changefreq>
-    </url>
+    <url><loc>https://bebzo.github.io/multitools/en/tools/salary-calculator.html</loc><priority>0.8</priority></url>
+    <url><loc>https://bebzo.github.io/multitools/en/tools/vat-calculator.html</loc><priority>0.8</priority></url>
+    <url><loc>https://bebzo.github.io/multitools/en/tools/roi-simulator.html</loc><priority>0.8</priority></url>
+    <url><loc>https://bebzo.github.io/multitools/en/tools/json-formatter.html</loc><priority>0.8</priority></url>
+    <url><loc>https://bebzo.github.io/multitools/en/tools/password-generator.html</loc><priority>0.8</priority></url>
+    <url><loc>https://bebzo.github.io/multitools/en/tools/word-counter.html</loc><priority>0.8</priority></url>
+    <url><loc>https://bebzo.github.io/multitools/en/tools/case-converter.html</loc><priority>0.8</priority></url>
+    <url><loc>https://bebzo.github.io/multitools/en/tools/lorem-ipsum.html</loc><priority>0.8</priority></url>
 </urlset>

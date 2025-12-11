@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Converter - Uppercase, Lowercase, Title Case</title>
+    <meta name="description"
+        content="Free case converter. Transform text to UPPERCASE, lowercase, Title Case, or aLtErNaTe instantly.">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="alternate" hreflang="fr" href="../../tools/convertisseur-casse.html">
+    <link rel="alternate" hreflang="en" href="case-converter.html">
+    <style>
+        .text-input {
+            width: 100%;
+            min-height: 200px;
+            padding: 16px;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-sm);
+            background: var(--bg-body);
+            color: var(--text-main);
+            font-family: inherit;
+            resize: vertical;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav-flex">
+            <a href="../index.html" class="logo"><span>⚡</span> MultiTools</a>
+            <nav id="nav-menu">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#finance">Finance</a>
+                <a href="../index.html#dev">Developers</a>
+                <a href="../index.html#writing" class="active">Writing</a>
+                <a href="../../tools/convertisseur-casse.html"
+                    style="margin-left: 20px; padding: 6px 12px; background: var(--bg-body); border-radius: 6px;">🇫🇷
+                    FR</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="ad-banner"><span>Advertisement (Header)</span></div>
+
+        <section class="calculator-layout">
+            <div>
+                <h1>Case Converter</h1>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">Transform text case instantly.</p>
+
+                <div class="calc-panel">
+                    <textarea class="text-input" id="text-input" placeholder="Paste your text here..."></textarea>
+
+                    <div class="buttons">
+                        <button onclick="toUpper()" class="btn-primary">UPPERCASE</button>
+                        <button onclick="toLower()" class="btn-primary">lowercase</button>
+                        <button onclick="toCapitalize()" class="btn-primary">Title Case</button>
+                        <button onclick="toAlternate()" class="btn-primary">aLtErNaTe</button>
+                    </div>
+                </div>
+
+                <article class="tool-content">
+                    <h2>Why Use a Case Converter?</h2>
+                    <p>It often happens that you need to change the format of an entire text: having written in CAPS
+                        LOCK by mistake (Caps Lock key stuck), wanting to properly format titles, or adapt text for a
+                        specific design. <strong>Over 500,000 users</strong> per month use case converters to quickly
+                        correct their texts.</p>
+                    <p>Whether it's to respect a style guide, correct a massive typo, or simply test different styles,
+                        this tool saves you precious time.</p>
+
+                    <h3>Available Formats</h3>
+                    <ul>
+                        <li><strong>UPPERCASE:</strong> Transforms all letters to capitals (UPPERCASE). Useful for
+                            titles or warnings.</li>
+                        <li><strong>lowercase:</strong> Transforms everything to small letters (lowercase).</li>
+                        <li><strong>Title Case:</strong> Capitalizes The First Letter Of Each Word. Often used in
+                            English titles (Title Case).</li>
+                        <li><strong>aLtErNaTe:</strong> The "Spongebob Case" style, often used ironically on the
+                            internet.</li>
+                    </ul>
+
+                    <h3>Common Use Cases</h3>
+                    <ul>
+                        <li><strong>Error Correction:</strong> You wrote an entire paragraph in CAPS LOCK by mistake.
+                        </li>
+                        <li><strong>Blog/Video Titles:</strong> Properly format your titles in Title Case.</li>
+                        <li><strong>Data Normalization:</strong> Standardize lists of names (e.g., customer databases).
+                        </li>
+                        <li><strong>Design and Mockups:</strong> Quickly test different typographic styles.</li>
+                    </ul>
+
+                    <h3>Formatting FAQ</h3>
+                    <div class="faq-item">
+                        <span class="faq-question">Is my data saved?</span>
+                        <p>No, conversion happens instantly in your browser via Javascript. No text is sent to our
+                            servers.</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">What's the difference between Title Case and Sentence case?</span>
+                        <p>Title Case capitalizes each word (Example Of Title). Sentence case only capitalizes the first
+                            letter of the sentence (Example of title). In English, Title Case is more common for
+                            headings.</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">Can it convert accents too?</span>
+                        <p>Yes, our tool correctly handles accented characters (é, è, à, ô, etc.). UPPERCASE/lowercase
+                            conversion works perfectly with accents.</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">How to use "aLtErNaTe" mode?</span>
+                        <p>It's a humorous format used on the internet to express sarcasm or mockery (inspired by the
+                            "Mocking Spongebob" meme). Use sparingly!</p>
+                    </div>
+                </article>
+            </div>
+
+            <aside>
+                <div class="sidebar-ad"><span>Advertisement (Square)</span></div>
+                <div class="sidebar-ad" style="margin-top: 20px; height: 600px;"><span>Advertisement (Skyscraper)</span>
+                </div>
+            </aside>
+        </section>
+
+        <div class="ad-banner"><span>Advertisement (Bottom)</span></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MultiTools</h3>
+                    <p>A collection of free online tools for developers, writers, and entrepreneurs.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="salary-calculator.html">Gross/Net Salary</a></li>
+                        <li><a href="vat-calculator.html">VAT Calculator</a></li>
+                        <li><a href="json-formatter.html">JSON Formatter</a></li>
+                        <li><a href="password-generator.html">Password Generator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="../legal/legal-notice.html">Legal Notice</a></li>
+                        <li><a href="../legal/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../legal/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>About</h3>
+                    <p>Developed to simplify your daily tasks. 100% free.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2025 MultiTools.</div>
+        </div>
+    </footer>
+
+    <script>
+        const input = document.getElementById('text-input');
+
+        function toUpper() {
+            input.value = input.value.toUpperCase();
+        }
+
+        function toLower() {
+            input.value = input.value.toLowerCase();
+        }
+
+        function toCapitalize() {
+            input.value = input.value.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+        }
+
+        function toAlternate() {
+            input.value = input.value.split('').map((c, i) => i % 2 ? c.toLowerCase() : c.toUpperCase()).join('');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAT Calculator - Add or Remove VAT Instantly</title>
+    <meta name="description"
+        content="Free VAT calculator. Add or remove VAT with all rates (20%, 10%, 5.5%, 2.1%). Instant calculation for businesses and freelancers.">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="alternate" hreflang="fr" href="../../tools/calcul-tva.html">
+    <link rel="alternate" hreflang="en" href="vat-calculator.html">
+</head>
+
+<body>
+    <header>
+        <div class="container nav-flex">
+            <a href="../index.html" class="logo"><span>⚡</span> MultiTools</a>
+            <nav id="nav-menu">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#finance" class="active">Finance</a>
+                <a href="../index.html#dev">Developers</a>
+                <a href="../index.html#writing">Writing</a>
+                <a href="../../tools/calcul-tva.html"
+                    style="margin-left: 20px; padding: 6px 12px; background: var(--bg-body); border-radius: 6px;">🇫🇷
+                    FR</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="ad-banner"><span>Advertisement (Header)</span></div>
+
+        <section class="calculator-layout">
+            <div>
+                <h1>VAT Calculator</h1>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">Add or remove VAT from any amount with all
+                    applicable rates.</p>
+
+                <div class="calc-panel">
+                    <div class="input-group">
+                        <label>Calculation Mode</label>
+                        <div style="display: flex; gap: 12px;">
+                            <button id="btn-add" class="btn-primary" style="flex: 1;">Add VAT</button>
+                            <button id="btn-remove" class="btn-primary"
+                                style="flex: 1; background: var(--bg-body); color: var(--text-main); border: 1px solid var(--border);">Remove
+                                VAT</button>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="amount">Amount</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="amount" value="100" step="0.01">
+                            <span class="suffix">€</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="rate">VAT Rate</label>
+                        <div class="input-wrapper">
+                            <select id="rate">
+                                <option value="20">20% (Standard Rate)</option>
+                                <option value="10">10% (Intermediate Rate)</option>
+                                <option value="5.5">5.5% (Reduced Rate)</option>
+                                <option value="2.1">2.1% (Super-Reduced Rate)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="result-box">
+                        <div class="result-row">
+                            <span class="result-label">Excl. VAT Amount</span>
+                            <span class="result-value val-ht">...</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">VAT Amount</span>
+                            <span class="result-value val-vat">...</span>
+                        </div>
+                        <div class="result-row highlight">
+                            <span class="result-label">Incl. VAT Amount</span>
+                            <span class="result-value val-ttc">...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <article class="tool-content">
+                    <h2>Everything About VAT in France</h2>
+                    <p>Value Added Tax (VAT) is an indirect tax paid by consumers and collected by businesses.
+                        Calculating VAT is essential for freelancers, merchants, and even individuals who want to know
+                        the real price excluding tax of a product. In France, VAT represents about <strong>45% of state
+                            tax revenue</strong>, or more than 200 billion euros per year.</p>
+                    <p>Whether you're an entrepreneur, accountant, or simple consumer, understanding the VAT mechanism
+                        allows you to better manage your finances and avoid invoicing errors.</p>
+
+                    <h3>VAT Rates in Effect (2025)</h3>
+                    <ul>
+                        <li><strong>20% (Standard Rate):</strong> Applies to most goods and services (clothing,
+                            electronics, services, etc.).</li>
+                        <li><strong>10% (Intermediate Rate):</strong> Restaurants, transport, renovation work, certain
+                            accommodations.</li>
+                        <li><strong>5.5% (Reduced Rate):</strong> Essential products, books, energy (gas/electricity),
+                            show tickets.</li>
+                        <li><strong>2.1% (Super-Reduced Rate):</strong> Reimbursed medications, press.</li>
+                    </ul>
+                    <p>Note: certain French territories (DOM-TOM, Corsica) apply specific rates. Corsica benefits from a
+                        standard rate of 20% but a reduced rate of 10% for certain products.</p>
+
+                    <h3>How to Calculate VAT?</h3>
+                    <p>Here are the simple formulas for your manual calculations:</p>
+                    <ul>
+                        <li><strong>Calculate Incl. VAT from Excl. VAT:</strong><br>
+                            <code>Incl. VAT Amount = Excl. VAT Amount × (1 + Rate/100)</code><br><em>Example: €100 Excl.
+                                VAT × 1.20 = €120 Incl. VAT.</em>
+                        </li>
+                        <li><strong>Calculate Excl. VAT from Incl. VAT:</strong><br>
+                            <code>Excl. VAT Amount = Incl. VAT Amount ÷ (1 + Rate/100)</code><br><em>Example: €120 Incl.
+                                VAT ÷ 1.20 = €100 Excl. VAT.</em>
+                        </li>
+                        <li><strong>Find VAT Amount:</strong><br> <code>VAT = Incl. VAT Amount - Excl. VAT Amount</code>
+                        </li>
+                    </ul>
+
+                    <h3>Who Must Declare VAT?</h3>
+                    <p>All businesses subject to VAT must collect it and remit it to the state.
+                        <strong>Micro-entrepreneurs</strong> benefit from a VAT exemption up to certain thresholds:
+                        €91,900 for sale of goods and €36,800 for service provision. Beyond that, the business must
+                        charge VAT and declare it monthly or quarterly.</p>
+
+                    <h3>VAT FAQ</h3>
+                    <div class="faq-item">
+                        <span class="faq-question">Who pays VAT?</span>
+                        <p>It's the final consumer who pays VAT. The business only collects it to remit it to the state.
+                            Businesses subject to VAT can recover VAT on their professional purchases.</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">What's the difference between Excl. VAT and Incl. VAT?</span>
+                        <p>Excl. VAT (Excluding Tax) = price without VAT. Incl. VAT (Including Tax) = final price paid
+                            by the customer, including VAT. For a product at €100 Excl. VAT with 20% VAT, the Incl. VAT
+                            price is €120.</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">Can you recover VAT on all purchases?</span>
+                        <p>No. Certain expenses don't allow recovery: passenger vehicles (except utility vehicles), fuel
+                            (partially recoverable), restaurant and accommodation expenses (limited). Purchases must be
+                            justified by a compliant invoice.</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">What happens if I exceed the exemption threshold?</span>
+                        <p>You must charge VAT from the 1st day of the month of exceeding. You'll also need to register
+                            for VAT with the SIE (Business Tax Service) and declare collected VAT monthly or quarterly.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">How do I know which VAT rate to apply?</span>
+                        <p>The rate depends on the nature of the product or service sold. If in doubt, consult the
+                            official list on impots.gouv.fr or contact your accountant. Applying the wrong rate can lead
+                            to a tax audit.</p>
+                    </div>
+                </article>
+            </div>
+
+            <aside>
+                <div class="sidebar-ad"><span>Advertisement (Square)</span></div>
+                <div class="sidebar-ad" style="margin-top: 20px; height: 600px;"><span>Advertisement (Skyscraper)</span>
+                </div>
+            </aside>
+        </section>
+
+        <div class="ad-banner"><span>Advertisement (Bottom)</span></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MultiTools</h3>
+                    <p>A collection of free online tools for developers, writers, and entrepreneurs. Simple, fast, and
+                        privacy-friendly.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="salary-calculator.html">Gross/Net Salary</a></li>
+                        <li><a href="vat-calculator.html">VAT Calculator</a></li>
+                        <li><a href="json-formatter.html">JSON Formatter</a></li>
+                        <li><a href="password-generator.html">Password Generator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="../legal/legal-notice.html">Legal Notice</a></li>
+                        <li><a href="../legal/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../legal/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>About</h3>
+                    <p>Developed to simplify your daily tasks. 100% free.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2025 MultiTools.</div>
+        </div>
+    </footer>
+
+    <script>
+        let mode = 'add';
+        function calculate() {
+            const amount = parseFloat(document.getElementById('amount').value) || 0;
+            const rate = parseFloat(document.getElementById('rate').value) / 100;
+
+            let ht, vat, ttc;
+            if (mode === 'add') {
+                ht = amount;
+                vat = ht * rate;
+                ttc = ht + vat;
+            } else {
+                ttc = amount;
+                ht = ttc / (1 + rate);
+                vat = ttc - ht;
+            }
+
+            document.querySelector('.val-ht').textContent = ht.toFixed(2) + ' €';
+            document.querySelector('.val-vat').textContent = vat.toFixed(2) + ' €';
+            document.querySelector('.val-ttc').textContent = ttc.toFixed(2) + ' €';
+        }
+
+        document.getElementById('btn-add').addEventListener('click', () => {
+            mode = 'add';
+            document.getElementById('btn-add').style.background = 'var(--primary)';
+            document.getElementById('btn-add').style.color = 'white';
+            document.getElementById('btn-remove').style.background = 'var(--bg-body)';
+            document.getElementById('btn-remove').style.color = 'var(--text-main)';
+            calculate();
+        });
+
+        document.getElementById('btn-remove').addEventListener('click', () => {
+            mode = 'remove';
+            document.getElementById('btn-remove').style.background = 'var(--primary)';
+            document.getElementById('btn-remove').style.color = 'white';
+            document.getElementById('btn-add').style.background = 'var(--bg-body)';
+            document.getElementById('btn-add').style.color = 'var(--text-main)';
+            calculate();
+        });
+
+        document.getElementById('amount').addEventListener('input', calculate);
+        document.getElementById('rate').addEventListener('change', calculate);
+        calculate();
+    </script>
+</body>
+
+</html>

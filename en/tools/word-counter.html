@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter - Count Words, Characters, and Lines</title>
+    <meta name="description"
+        content="Free word counter. Count words, characters, and lines instantly. Perfect for writers, students, and SEO.">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="alternate" hreflang="fr" href="../../tools/compteur-mots.html">
+    <link rel="alternate" hreflang="en" href="word-counter.html">
+    <style>
+        .text-input {
+            width: 100%;
+            min-height: 200px;
+            padding: 16px;
+            border: 2px solid var(--border);
+            border-radius: var(--radius-sm);
+            background: var(--bg-body);
+            color: var(--text-main);
+            font-family: inherit;
+            resize: vertical;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .stats>div {
+            text-align: center;
+            padding: 20px;
+            background: var(--bg-body);
+            border-radius: var(--radius-md);
+        }
+
+        .result-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .result-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav-flex">
+            <a href="../index.html" class="logo"><span>⚡</span> MultiTools</a>
+            <nav id="nav-menu">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#finance">Finance</a>
+                <a href="../index.html#dev">Developers</a>
+                <a href="../index.html#writing" class="active">Writing</a>
+                <a href="../../tools/compteur-mots.html"
+                    style="margin-left: 20px; padding: 6px 12px; background: var(--bg-body); border-radius: 6px;">🇫🇷
+                    FR</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="ad-banner"><span>Advertisement (Header)</span></div>
+
+        <section class="calculator-layout">
+            <div>
+                <h1>Word Counter</h1>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">Count words, characters, and lines in
+                    real-time.</p>
+
+                <div class="calc-panel">
+                    <textarea class="text-input" id="text-input"
+                        placeholder="Paste or type your text here..."></textarea>
+
+                    <div class="stats">
+                        <div>
+                            <div class="result-value" id="count-words">0</div>
+                            <div class="result-label">Words</div>
+                        </div>
+                        <div>
+                            <div class="result-value" id="count-chars">0</div>
+                            <div class="result-label">Characters</div>
+                        </div>
+                        <div>
+                            <div class="result-value" id="count-lines">0</div>
+                            <div class="result-label">Lines</div>
+                        </div>
+                    </div>
+                </div>
+
+                <article class="tool-content">
+                    <h2>Why Use an Online Word Counter?</h2>
+                    <p>Whether you're a web writer, student, journalist, or community manager, respecting a character or
+                        word limit is often crucial. This free and instant counter allows you to check the length of
+                        your texts without installing anything. <strong>Over 2 million writers</strong> use word
+                        counters every day to optimize their content.</p>
+                    <p>Whether it's to respect an editorial constraint, optimize your SEO, or simply check the length of
+                        a tweet, this tool is essential in your digital toolbox.</p>
+
+                    <h3>Common Limits (Social Media & SEO)</h3>
+                    <ul>
+                        <li><strong>Twitter (X):</strong> 280 characters max.</li>
+                        <li><strong>Meta Description (SEO):</strong> Between 150 and 160 characters recommended.</li>
+                        <li><strong>SEO Blog Article:</strong> Google often favors in-depth articles of over 1500 words.
+                        </li>
+                        <li><strong>LinkedIn (Post):</strong> Up to 3000 characters.</li>
+                    </ul>
+
+                    <h3>Difference Between "Words" and "Characters"</h3>
+                    <p>The number of characters includes all letters, numbers, punctuation, and spaces. The number of
+                        words counts groups of characters separated by spaces. Note: some word processors count
+                        apostrophes differently.</p>
+
+                    <h3>Common Use Cases</h3>
+                    <ul>
+                        <li><strong>SEO Web Writing:</strong> Google favors articles of 1500-2500 words for competitive
+                            queries.</li>
+                        <li><strong>Theses and Dissertations:</strong> Respect the imposed word count (often 10,000 to
+                            50,000 words).</li>
+                        <li><strong>Google Ads Advertising:</strong> Title limited to 30 characters, description to 90
+                            characters.</li>
+                        <li><strong>CV and Cover Letters:</strong> Ideally 200-400 words for a cover letter.</li>
+                    </ul>
+
+                    <h3>Writing FAQ</h3>
+                    <div class="faq-item">
+                        <span class="faq-question">Does this counter include spaces?</span>
+                        <p>Yes, in the "Characters" count, spaces are included. This is the standard for social networks
+                            and most writing tools.</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">What's the ideal length for a blog article?</span>
+                        <p>For SEO, aim for 1500-2500 words for competitive topics. For news articles or simple
+                            tutorials, 800-1200 words are sufficient. Quality always trumps quantity.</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">How to count words in a PDF?</span>
+                        <p>Copy the text from the PDF and paste it into our tool. Note: some scanned PDFs (images) don't
+                            allow text copying. Use an OCR tool in that case.</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">Do spaces count as characters?</span>
+                        <p>Yes, in our "Characters" counter, spaces are included. This is the norm for social networks
+                            and most writing tools.</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">How many words for a 5-minute speech?</span>
+                        <p>On average, we speak at 130-150 words per minute. For a 5-minute speech, aim for 650-750
+                            words. Practice aloud to adjust.</p>
+                    </div>
+                </article>
+            </div>
+
+            <aside>
+                <div class="sidebar-ad"><span>Advertisement (Square)</span></div>
+                <div class="sidebar-ad" style="margin-top: 20px; height: 600px;"><span>Advertisement (Skyscraper)</span>
+                </div>
+            </aside>
+        </section>
+
+        <div class="ad-banner"><span>Advertisement (Bottom)</span></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MultiTools</h3>
+                    <p>A collection of free online tools for developers, writers, and entrepreneurs.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="salary-calculator.html">Gross/Net Salary</a></li>
+                        <li><a href="vat-calculator.html">VAT Calculator</a></li>
+                        <li><a href="json-formatter.html">JSON Formatter</a></li>
+                        <li><a href="password-generator.html">Password Generator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="../legal/legal-notice.html">Legal Notice</a></li>
+                        <li><a href="../legal/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../legal/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>About</h3>
+                    <p>Developed to simplify your daily tasks. 100% free.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2025 MultiTools.</div>
+        </div>
+    </footer>
+
+    <script>
+        const input = document.getElementById('text-input');
+
+        function count() {
+            const text = input.value;
+            const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+            const chars = text.length;
+            const lines = text ? text.split('\n').length : 0;
+
+            document.getElementById('count-words').textContent = words;
+            document.getElementById('count-chars').textContent = chars;
+            document.getElementById('count-lines').textContent = lines;
+        }
+
+        input.addEventListener('input', count);
+        count();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROI Calculator - Return on Investment Simulator</title>
+    <meta name="description"
+        content="Calculate your ROI (Return on Investment) instantly. Free simulator for real estate, stock market, advertising, and business investments.">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="alternate" hreflang="fr" href="../../tools/simulateur-roi.html">
+    <link rel="alternate" hreflang="en" href="roi-simulator.html">
+</head>
+
+<body>
+    <header>
+        <div class="container nav-flex">
+            <a href="../index.html" class="logo"><span>⚡</span> MultiTools</a>
+            <nav id="nav-menu">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#finance" class="active">Finance</a>
+                <a href="../index.html#dev">Developers</a>
+                <a href="../index.html#writing">Writing</a>
+                <a href="../../tools/simulateur-roi.html"
+                    style="margin-left: 20px; padding: 6px 12px; background: var(--bg-body); border-radius: 6px;">🇫🇷
+                    FR</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="ad-banner"><span>Advertisement (Header)</span></div>
+
+        <section class="calculator-layout">
+            <div>
+                <h1>ROI Calculator</h1>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">Measure the profitability of your investments
+                    in one click.</p>
+
+                <div class="calc-panel">
+                    <div class="input-group">
+                        <label for="invested">Amount Invested</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="invested" value="1000" step="10">
+                            <span class="suffix">€</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="final">Final Gain</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="final" value="1500" step="10">
+                            <span class="suffix">€</span>
+                        </div>
+                    </div>
+
+                    <div class="result-box">
+                        <div class="result-row">
+                            <span class="result-label">Net Gain</span>
+                            <span class="result-value val-gain">...</span>
+                        </div>
+                        <div class="result-row highlight">
+                            <span class="result-label">ROI (Profitability)</span>
+                            <span class="result-value val-roi" style="font-size: 1.5rem;">...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <article class="tool-content">
+                    <h2>What is ROI (Return on Investment)?</h2>
+                    <p>ROI (Return On Investment) is the number one financial indicator for measuring investment
+                        effectiveness. It tells you how much you gained (or lost) relative to the initially invested
+                        amount. Whether for real estate, stock market, advertising, or entrepreneurial investment, ROI
+                        is <strong>the universal profitability indicator</strong>.</p>
+                    <p>A good ROI varies by sector: in the stock market, 7-8% annually is excellent. In e-commerce
+                        (Facebook/Google Ads advertising), we often aim for a 300% ROI (i.e., x3) to cover all ancillary
+                        costs (logistics, customer service, etc.).</p>
+
+                    <h3>The ROI Formula</h3>
+                    <p>The calculation is universal:</p>
+                    <p><code>ROI (%) = ((Final Gain - Amount Invested) / Amount Invested) x 100</code></p>
+
+                    <h3>How to Interpret the Result?</h3>
+                    <ul>
+                        <li><strong>Positive ROI (> 0%):</strong> Your operation is profitable. For €100 invested, you
+                            recovered your stake + a profit.</li>
+                        <li><strong>Negative ROI (< 0%):</strong> You lost money. The recovered amount is less than the
+                                    invested amount.</li>
+                    </ul>
+
+                    <h3>Concrete ROI Calculation Examples</h3>
+                    <p><strong>Example 1 - Rental Investment:</strong> You buy an apartment for €150,000 and rent it for
+                        €700/month (€8,400/year). Gross ROI = (8,400 / 150,000) x 100 = <strong>5.6%</strong>. Note: you
+                        must deduct expenses (property tax, maintenance, vacancy) to get net ROI.</p>
+                    <p><strong>Example 2 - Online Advertising:</strong> You spend €500 on Google Ads and generate €2,000
+                        in sales. ROI = ((2,000 - 500) / 500) x 100 = <strong>300%</strong>. You tripled your stake!</p>
+
+                    <h3>Finance FAQ</h3>
+                    <div class="faq-item">
+                        <span class="faq-question">What is a good ROI?</span>
+                        <p>It depends on the sector. Real estate: 5-10% gross. Stock market: 7-8% annually. Online
+                            advertising: 200-500%. The higher the ROI, the more profitable the investment.</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">How to calculate ROI for a real estate investment?</span>
+                        <p>Gross ROI = (Annual Rent / Purchase Price) x 100. For net ROI, deduct expenses (property tax,
+                            work, vacancy, management fees). A good gross rental ROI is between 5% and 10% depending on
+                            the city.</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">What's the difference between ROI and profitability?</span>
+                        <p>ROI measures return relative to initial investment (in %). Profitability can designate
+                            several things: profit margin, rate of return, etc. ROI is more precise and universal.</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">What does a 100% ROI mean?</span>
+                        <p>It means you doubled your stake. For €1,000 invested, you recovered €2,000 (€1,000 capital +
+                            €1,000 gain). That's an excellent result!</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">Does ROI account for time?</span>
+                        <p>No, simple ROI doesn't account for duration. A 50% ROI in 1 year is much better than a 50%
+                            ROI in 10 years. To compare, use annualized ROI.</p>
+                    </div>
+                </article>
+            </div>
+
+            <aside>
+                <div class="sidebar-ad"><span>Advertisement (Square)</span></div>
+                <div class="sidebar-ad" style="margin-top: 20px; height: 600px;"><span>Advertisement (Skyscraper)</span>
+                </div>
+            </aside>
+        </section>
+
+        <div class="ad-banner"><span>Advertisement (Bottom)</span></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MultiTools</h3>
+                    <p>A collection of free online tools for developers, writers, and entrepreneurs. Simple, fast, and
+                        privacy-friendly.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="salary-calculator.html">Gross/Net Salary</a></li>
+                        <li><a href="vat-calculator.html">VAT Calculator</a></li>
+                        <li><a href="json-formatter.html">JSON Formatter</a></li>
+                        <li><a href="password-generator.html">Password Generator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="../legal/legal-notice.html">Legal Notice</a></li>
+                        <li><a href="../legal/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../legal/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>About</h3>
+                    <p>Developed to simplify your daily tasks. 100% free.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2025 MultiTools.</div>
+        </div>
+    </footer>
+
+    <script>
+        function calculate() {
+            const invested = parseFloat(document.getElementById('invested').value) || 0;
+            const final = parseFloat(document.getElementById('final').value) || 0;
+
+            const gain = final - invested;
+            const roi = invested > 0 ? ((gain / invested) * 100) : 0;
+
+            document.querySelector('.val-gain').textContent = gain.toLocaleString('en-US') + ' €';
+            document.querySelector('.val-roi').textContent = roi.toFixed(2) + ' %';
+
+            const roiEl = document.querySelector('.val-roi');
+            roiEl.style.color = roi >= 0 ? 'var(--primary)' : 'red';
+        }
+
+        document.getElementById('invested').addEventListener('input', calculate);
+        document.getElementById('final').addEventListener('input', calculate);
+        calculate();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Ipsum Generator - Dummy Text for Mockups</title>
+    <meta name="description"
+        content="Generate Lorem Ipsum dummy text instantly. Free placeholder text generator for designers and developers.">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="alternate" hreflang="fr" href="../../tools/lorem-ipsum.html">
+    <link rel="alternate" hreflang="en" href="lorem-ipsum.html">
+</head>
+
+<body>
+    <header>
+        <div class="container nav-flex">
+            <a href="../index.html" class="logo"><span>⚡</span> MultiTools</a>
+            <nav id="nav-menu">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#finance">Finance</a>
+                <a href="../index.html#dev">Developers</a>
+                <a href="../index.html#writing" class="active">Writing</a>
+                <a href="../../tools/lorem-ipsum.html"
+                    style="margin-left: 20px; padding: 6px 12px; background: var(--bg-body); border-radius: 6px;">🇫🇷
+                    FR</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="ad-banner"><span>Advertisement (Header)</span></div>
+
+        <section class="calculator-layout">
+            <div>
+                <h1>Lorem Ipsum Generator</h1>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">Generate placeholder text for your mockups.
+                </p>
+
+                <div class="calc-panel">
+                    <div class="input-group">
+                        <label for="paragraphs">Number of Paragraphs</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="paragraphs" value="3" min="1" max="20">
+                        </div>
+                    </div>
+
+                    <button onclick="generate()" class="btn-primary" style="width: 100%;">Generate Lorem Ipsum</button>
+
+                    <div id="output"
+                        style="margin-top: 20px; padding: 16px; background: var(--bg-body); border-radius: var(--radius-sm); min-height: 100px;">
+                    </div>
+                </div>
+
+                <article class="tool-content">
+                    <h2>What is Lorem Ipsum?</h2>
+                    <p>Lorem Ipsum is the standard dummy text of the printing and digital composition industry since the
+                        1500s. It's used by graphic designers and web developers to fill text spaces in a mockup to
+                        focus on layout without being distracted by readable content. Used for over <strong>500
+                            years</strong>, Lorem Ipsum has become the industry standard in design and printing.</p>
+                    <p>Graphic designers, web developers, and typographers worldwide use Lorem Ipsum to visualize the
+                        final rendering of a project before having the definitive content.</p>
+
+                    <h3>Where Does This Text Come From?</h3>
+                    <p>Contrary to popular belief, it's not random gibberish. It has its roots in a piece of classical
+                        Latin literature dating from 45 BC, written by Cicero: "De finibus bonorum et malorum" (On the
+                        Ends of Good and Evil).</p>
+
+                    <h3>Why Use It?</h3>
+                    <p>Lorem Ipsum is used because it offers a more or less normal distribution of letters, unlike a
+                        repetition like "Text here text here". This gives the illusion of standard English or French
+                        text.</p>
+
+                    <h3>Common Use Cases</h3>
+                    <ul>
+                        <li><strong>Web and Mobile Mockups:</strong> Visualize a site's rendering before having final
+                            content.</li>
+                        <li><strong>Client Presentations:</strong> Show a layout without distracting with real content.
+                        </li>
+                        <li><strong>Typographic Tests:</strong> Evaluate a font's readability with neutral text.</li>
+                        <li><strong>UI/UX Prototypes:</strong> Fill spaces to test an interface's ergonomics.</li>
+                    </ul>
+
+                    <h3>Lorem FAQ</h3>
+                    <div class="faq-item">
+                        <span class="faq-question">What does "Lorem Ipsum" mean?</span>
+                        <p>It's a truncated version of "Dolorem Ipsum", which means "Pain itself".</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">Is Lorem Ipsum always the same text?</span>
+                        <p>The classic text begins with "Lorem ipsum dolor sit amet...", but there are variants and
+                            generators that produce longer or adapted versions. Our tool uses Cicero's original text.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">Can I use Lorem Ipsum in a commercial project?</span>
+                        <p>Yes, Lorem Ipsum is in the public domain. You can use it freely in all your projects,
+                            commercial or not. However, be sure to replace it with real content before production!</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">Are there alternatives to Lorem Ipsum?</span>
+                        <p>Yes: Bacon Ipsum (for meat lovers), Hipster Ipsum (hipster jargon), or generators based on
+                            movies/series. But Lorem Ipsum remains the most professional and universal.</p>
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-question">How many paragraphs should I generate?</span>
+                        <p>It depends on your mockup. For a homepage, 2-3 paragraphs are enough. For a blog article,
+                            5-10 paragraphs give a realistic preview. Adjust according to your needs!</p>
+                    </div>
+                </article>
+            </div>
+
+            <aside>
+                <div class="sidebar-ad"><span>Advertisement (Square)</span></div>
+                <div class="sidebar-ad" style="margin-top: 20px; height: 600px;"><span>Advertisement (Skyscraper)</span>
+                </div>
+            </aside>
+        </section>
+
+        <div class="ad-banner"><span>Advertisement (Bottom)</span></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MultiTools</h3>
+                    <p>A collection of free online tools for developers, writers, and entrepreneurs.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="salary-calculator.html">Gross/Net Salary</a></li>
+                        <li><a href="vat-calculator.html">VAT Calculator</a></li>
+                        <li><a href="json-formatter.html">JSON Formatter</a></li>
+                        <li><a href="password-generator.html">Password Generator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="../legal/legal-notice.html">Legal Notice</a></li>
+                        <li><a href="../legal/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../legal/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>About</h3>
+                    <p>Developed to simplify your daily tasks. 100% free.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2025 MultiTools.</div>
+        </div>
+    </footer>
+
+    <script>
+        const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
+        function generate() {
+            const count = parseInt(document.getElementById('paragraphs').value) || 1;
+            const output = document.getElementById('output');
+            let result = '';
+
+            for (let i = 0; i < count; i++) {
+                result += '<p>' + lorem + '</p>';
+            }
+
+            output.innerHTML = result;
+        }
+
+        generate();
+    </script>
+</body>
+
+</html>
